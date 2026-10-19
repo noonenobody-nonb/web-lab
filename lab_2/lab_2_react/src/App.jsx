@@ -1,24 +1,19 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Footer from './components/Footer';
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Header />
-      <main>
-        <Experience />
-        <Education />
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans p-4 md:p-8">
+      <div className="max-w-4xl mx-auto">
+        <Header />
+        <main className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <Experience />
+          <Education />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;
